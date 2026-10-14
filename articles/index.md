@@ -21,6 +21,8 @@
 
 - [All-In-One Functions for Common Mediation
   Models](https://sfcheung.github.io/manymome/articles/q_mediation.md):
+- [Auxiliary Variables in All-In-One FIML
+  Mediation](https://sfcheung.github.io/manymome/articles/q_mediation_auxiliary.md):
 - [Simple Mediation Models Corrected for Measurement
   Error](https://sfcheung.github.io/manymome/articles/q_mediation_sem_indicators_simple.md):
 - [Parallel Mediation Models Corrected for Measurement

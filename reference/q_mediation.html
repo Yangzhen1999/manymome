@@ -38,6 +38,7 @@ just one function."><meta property="og:image" content="https://sfcheung.github.i
     <li><hr class="dropdown-divider"></li>
     <li><h6 class="dropdown-header" data-toc-skip>All-In-One Functions</h6></li>
     <li><a class="dropdown-item" href="../articles/q_mediation.html">All-In-One Functions for Common Mediation Models</a></li>
+    <li><a class="dropdown-item" href="../articles/q_mediation_auxiliary.html">Auxiliary Variables in All-In-One FIML Mediation</a></li>
     <li><a class="dropdown-item" href="../articles/q_mediation_sem_indicators_simple.html">Simple Mediation Models Corrected for Measurement Error</a></li>
     <li><a class="dropdown-item" href="../articles/q_mediation_sem_indicators_parallel.html">Parallel Mediation Models Corrected for Measurement Error</a></li>
     <li><a class="dropdown-item" href="../articles/q_mediation_sem_indicators_serial.html">Serial Mediation Models Corrected for Measurement Error</a></li>
@@ -115,7 +116,8 @@ just one function.</p>
 <span>  na.action <span class="op">=</span> <span class="cn">NA</span>,</span>
 <span>  parallel <span class="op">=</span> <span class="cn">TRUE</span>,</span>
 <span>  ncores <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html" class="external-link">max</a></span><span class="op">(</span><span class="fu">parallel</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/r/parallel/detectCores.html" class="external-link">detectCores</a></span><span class="op">(</span>logical <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span> <span class="op">-</span> <span class="fl">1</span>, <span class="fl">1</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>,</span>
-<span>  progress <span class="op">=</span> <span class="cn">TRUE</span></span>
+<span>  progress <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>  aux <span class="op">=</span> <span class="cn">NULL</span></span>
 <span><span class="op">)</span></span>
 <span></span>
 <span><span class="fu">q_moderated_mediation</span><span class="op">(</span></span>
@@ -143,7 +145,8 @@ just one function.</p>
 <span>  na.action <span class="op">=</span> <span class="cn">NA</span>,</span>
 <span>  parallel <span class="op">=</span> <span class="cn">TRUE</span>,</span>
 <span>  ncores <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html" class="external-link">max</a></span><span class="op">(</span><span class="fu">parallel</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/r/parallel/detectCores.html" class="external-link">detectCores</a></span><span class="op">(</span>logical <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span> <span class="op">-</span> <span class="fl">1</span>, <span class="fl">1</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>,</span>
-<span>  progress <span class="op">=</span> <span class="cn">TRUE</span></span>
+<span>  progress <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>  aux <span class="op">=</span> <span class="cn">NULL</span></span>
 <span><span class="op">)</span></span>
 <span></span>
 <span><span class="fu">q_simple_mediation</span><span class="op">(</span></span>
@@ -171,7 +174,8 @@ just one function.</p>
 <span>  na.action <span class="op">=</span> <span class="cn">NA</span>,</span>
 <span>  parallel <span class="op">=</span> <span class="cn">TRUE</span>,</span>
 <span>  ncores <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html" class="external-link">max</a></span><span class="op">(</span><span class="fu">parallel</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/r/parallel/detectCores.html" class="external-link">detectCores</a></span><span class="op">(</span>logical <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span> <span class="op">-</span> <span class="fl">1</span>, <span class="fl">1</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>,</span>
-<span>  progress <span class="op">=</span> <span class="cn">TRUE</span></span>
+<span>  progress <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>  aux <span class="op">=</span> <span class="cn">NULL</span></span>
 <span><span class="op">)</span></span>
 <span></span>
 <span><span class="fu">q_moderated_simple_mediation</span><span class="op">(</span></span>
@@ -199,7 +203,8 @@ just one function.</p>
 <span>  na.action <span class="op">=</span> <span class="cn">NA</span>,</span>
 <span>  parallel <span class="op">=</span> <span class="cn">TRUE</span>,</span>
 <span>  ncores <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html" class="external-link">max</a></span><span class="op">(</span><span class="fu">parallel</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/r/parallel/detectCores.html" class="external-link">detectCores</a></span><span class="op">(</span>logical <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span> <span class="op">-</span> <span class="fl">1</span>, <span class="fl">1</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>,</span>
-<span>  progress <span class="op">=</span> <span class="cn">TRUE</span></span>
+<span>  progress <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>  aux <span class="op">=</span> <span class="cn">NULL</span></span>
 <span><span class="op">)</span></span>
 <span></span>
 <span><span class="fu">q_serial_mediation</span><span class="op">(</span></span>
@@ -227,7 +232,8 @@ just one function.</p>
 <span>  na.action <span class="op">=</span> <span class="cn">NA</span>,</span>
 <span>  parallel <span class="op">=</span> <span class="cn">TRUE</span>,</span>
 <span>  ncores <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html" class="external-link">max</a></span><span class="op">(</span><span class="fu">parallel</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/r/parallel/detectCores.html" class="external-link">detectCores</a></span><span class="op">(</span>logical <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span> <span class="op">-</span> <span class="fl">1</span>, <span class="fl">1</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>,</span>
-<span>  progress <span class="op">=</span> <span class="cn">TRUE</span></span>
+<span>  progress <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>  aux <span class="op">=</span> <span class="cn">NULL</span></span>
 <span><span class="op">)</span></span>
 <span></span>
 <span><span class="fu">q_moderated_serial_mediation</span><span class="op">(</span></span>
@@ -255,7 +261,8 @@ just one function.</p>
 <span>  na.action <span class="op">=</span> <span class="cn">NA</span>,</span>
 <span>  parallel <span class="op">=</span> <span class="cn">TRUE</span>,</span>
 <span>  ncores <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html" class="external-link">max</a></span><span class="op">(</span><span class="fu">parallel</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/r/parallel/detectCores.html" class="external-link">detectCores</a></span><span class="op">(</span>logical <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span> <span class="op">-</span> <span class="fl">1</span>, <span class="fl">1</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>,</span>
-<span>  progress <span class="op">=</span> <span class="cn">TRUE</span></span>
+<span>  progress <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>  aux <span class="op">=</span> <span class="cn">NULL</span></span>
 <span><span class="op">)</span></span>
 <span></span>
 <span><span class="fu">q_parallel_mediation</span><span class="op">(</span></span>
@@ -283,7 +290,8 @@ just one function.</p>
 <span>  na.action <span class="op">=</span> <span class="cn">NA</span>,</span>
 <span>  parallel <span class="op">=</span> <span class="cn">TRUE</span>,</span>
 <span>  ncores <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html" class="external-link">max</a></span><span class="op">(</span><span class="fu">parallel</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/r/parallel/detectCores.html" class="external-link">detectCores</a></span><span class="op">(</span>logical <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span> <span class="op">-</span> <span class="fl">1</span>, <span class="fl">1</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>,</span>
-<span>  progress <span class="op">=</span> <span class="cn">TRUE</span></span>
+<span>  progress <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>  aux <span class="op">=</span> <span class="cn">NULL</span></span>
 <span><span class="op">)</span></span>
 <span></span>
 <span><span class="fu">q_moderated_parallel_mediation</span><span class="op">(</span></span>
@@ -311,7 +319,8 @@ just one function.</p>
 <span>  na.action <span class="op">=</span> <span class="cn">NA</span>,</span>
 <span>  parallel <span class="op">=</span> <span class="cn">TRUE</span>,</span>
 <span>  ncores <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html" class="external-link">max</a></span><span class="op">(</span><span class="fu">parallel</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/r/parallel/detectCores.html" class="external-link">detectCores</a></span><span class="op">(</span>logical <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span> <span class="op">-</span> <span class="fl">1</span>, <span class="fl">1</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>,</span>
-<span>  progress <span class="op">=</span> <span class="cn">TRUE</span></span>
+<span>  progress <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>  aux <span class="op">=</span> <span class="cn">NULL</span></span>
 <span><span class="op">)</span></span>
 <span></span>
 <span><span class="fu">get_fit</span><span class="op">(</span><span class="va">q_out</span><span class="op">)</span></span>
@@ -605,6 +614,20 @@ detected by
 <dt id="arg-progress">progress<a class="anchor" aria-label="anchor" href="#arg-progress"></a></dt>
 <dd><p>Logical. Display
 progress or not.</p></dd>
+
+
+<dt id="arg-aux">aux<a class="anchor" aria-label="anchor" href="#arg-aux"></a></dt>
+<dd><p>Optional character vector of auxiliary variable names.
+These variables are added using saturated correlates for FIML,
+not as predictors in the substantive regression equations.
+Supported only for observed-variable SEM without indicators or
+moderators, using ML or MLR and FIML. Variables must be numeric,
+nonconstant, and distinct from model variables and covariates.
+Missing auxiliary values are permitted. Default is <code>NULL</code>.
+When supplied, exogenous variables are treated as random
+(<code>fixed.x = FALSE</code>); a message is shown if <code>fixed.x</code> was <code>TRUE</code>.
+This adds distributional assumptions for these variables and
+does not guarantee MAR or control for causal confounding.</p></dd>
 
 
 <dt id="arg-q-out">q_out<a class="anchor" aria-label="anchor" href="#arg-q-out"></a></dt>
@@ -933,6 +956,23 @@ compute the total indirect effect.</p></li>
 </ul></div>
 
 
+</div>
+
+<div class="section">
+<h3 id="auxiliary-variables-for-fiml">Auxiliary Variables for FIML<a class="anchor" aria-label="anchor" href="#auxiliary-variables-for-fiml"></a></h3>
+
+
+<p>With <code>aux</code>, the automatically generated path model is fitted using
+<code><a href="https://rdrr.io/pkg/semTools/man/auxiliary.html" class="external-link">semTools::auxiliary()</a></code>. Auxiliary means, variances and covariances
+are estimated along with the substantive model. They can help make
+MAR more plausible when they are related to missingness or missing
+values, but do not establish MAR. Use <code>cov</code>, not <code>aux</code>, for variables
+that should adjust the substantive regression equations.
+Bootstrap and Monte Carlo confidence intervals use the augmented
+model. Printed output identifies auxiliary variables; the path plot
+continues to show the substantive mediation model.
+<code>aux = NULL</code> preserves the usual workflow. Grouped, clustered,
+weighted, categorical and SAM analyses are not supported with <code>aux</code>.</p>
 </div>
 
 <div class="section">
