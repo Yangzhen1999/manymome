@@ -13,6 +13,8 @@ name: pkgdown
 
 jobs:
   pkgdown:
+    permissions:
+      contents: write
     runs-on: ubuntu-latest
     # Only restrict concurrency for non-PR jobs
     concurrency:
