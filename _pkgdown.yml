@@ -44,6 +44,7 @@ articles:
   navbar: All-In-One Functions
   contents:
   - articles/q_mediation
+  - articles/q_mediation_auxiliary
   - articles/q_mediation_sem_indicators_simple
   - articles/q_mediation_sem_indicators_parallel
   - articles/q_mediation_sem_indicators_serial
