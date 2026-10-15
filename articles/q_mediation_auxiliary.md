@@ -83,7 +83,7 @@ print(out)
     ## |             Path Analysis Results               |
     ## ===================================================
     ## 
-    ## lavaan 0.7-3 ended normally after 18 iterations
+    ## lavaan 0.7-3 ended normally after 17 iterations
     ## 
     ##   Estimator                                         ML
     ##   Optimization method                           NLMINB
@@ -163,7 +163,7 @@ print(out)
     ## == Indirect Effect(s) ==
     ## 
     ##                ind  CI.lo  CI.hi Sig pvalue     SE
-    ## x -> m -> y 0.1239 0.0684 0.1898 Sig      0 0.0315
+    ## x -> m -> y 0.1239 0.0680 0.1903 Sig      0 0.0314
     ## 
     ##  - [CI.lo to CI.hi] are 95.0% Monte Carlo confidence intervals with
     ##    20000 replications.
@@ -175,7 +175,7 @@ print(out)
     ## == Indirect Effect(s) (x-variable(s) Standardized) ==
     ## 
     ##                std  CI.lo  CI.hi Sig pvalue     SE
-    ## x -> m -> y 0.1282 0.0699 0.1981 Sig      0 0.0330
+    ## x -> m -> y 0.1282 0.0700 0.1978 Sig      0 0.0329
     ## 
     ##  - [CI.lo to CI.hi] are 95.0% Monte Carlo confidence intervals with
     ##    20000 replications.
@@ -188,7 +188,7 @@ print(out)
     ## == Indirect Effect(s) (y-variable(s) Standardized) ==
     ## 
     ##                std  CI.lo  CI.hi Sig pvalue     SE
-    ## x -> m -> y 0.1045 0.0583 0.1568 Sig      0 0.0254
+    ## x -> m -> y 0.1045 0.0586 0.1570 Sig      0 0.0253
     ## 
     ##  - [CI.lo to CI.hi] are 95.0% Monte Carlo confidence intervals with
     ##    20000 replications.
@@ -201,7 +201,7 @@ print(out)
     ## == Indirect Effect(s) (Both x-variable(s) and y-variable(s) Standardized) ==
     ## 
     ##                std  CI.lo  CI.hi Sig pvalue     SE
-    ## x -> m -> y 0.1082 0.0600 0.1630 Sig      0 0.0265
+    ## x -> m -> y 0.1082 0.0602 0.1633 Sig      0 0.0265
     ## 
     ##  - [CI.lo to CI.hi] are 95.0% Monte Carlo confidence intervals with
     ##    20000 replications.
@@ -217,7 +217,7 @@ print(out)
     ## == Effect(s) ==
     ## 
     ##           ind  CI.lo  CI.hi Sig pvalue     SE
-    ## x -> y 0.2332 0.1118 0.3531 Sig 0.0002 0.0612
+    ## x -> y 0.2332 0.1120 0.3528 Sig 0.0002 0.0612
     ## 
     ##  - [CI.lo to CI.hi] are 95.0% Monte Carlo confidence intervals with
     ##    20000 replications.
@@ -229,7 +229,7 @@ print(out)
     ## == Effect(s) (x-variable(s) Standardized) ==
     ## 
     ##           std  CI.lo  CI.hi Sig pvalue     SE
-    ## x -> y 0.2413 0.1149 0.3682 Sig 0.0002 0.0642
+    ## x -> y 0.2413 0.1155 0.3681 Sig 0.0002 0.0642
     ## 
     ##  - [CI.lo to CI.hi] are 95.0% Monte Carlo confidence intervals with
     ##    20000 replications.
@@ -242,7 +242,7 @@ print(out)
     ## == Effect(s) (y-variable(s) Standardized) ==
     ## 
     ##           std  CI.lo  CI.hi Sig pvalue     SE
-    ## x -> y 0.1968 0.0953 0.2940 Sig 0.0002 0.0503
+    ## x -> y 0.1968 0.0951 0.2940 Sig 0.0002 0.0503
     ## 
     ##  - [CI.lo to CI.hi] are 95.0% Monte Carlo confidence intervals with
     ##    20000 replications.
@@ -255,7 +255,7 @@ print(out)
     ## == Effect(s) (Both x-variable(s) and y-variable(s) Standardized) ==
     ## 
     ##           std  CI.lo  CI.hi Sig pvalue     SE
-    ## x -> y 0.2036 0.0981 0.3052 Sig 0.0002 0.0526
+    ## x -> y 0.2036 0.0981 0.3053 Sig 0.0002 0.0527
     ## 
     ##  - [CI.lo to CI.hi] are 95.0% Monte Carlo confidence intervals with
     ##    20000 replications.

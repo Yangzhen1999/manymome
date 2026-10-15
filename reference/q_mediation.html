@@ -618,16 +618,8 @@ progress or not.</p></dd>
 
 <dt id="arg-aux">aux<a class="anchor" aria-label="anchor" href="#arg-aux"></a></dt>
 <dd><p>Optional character vector of auxiliary variable names.
-These variables are added using saturated correlates for FIML,
-not as predictors in the substantive regression equations.
-Supported only for observed-variable SEM without indicators or
-moderators, using ML or MLR and FIML. Variables must be numeric,
-nonconstant, and distinct from model variables and covariates.
-Missing auxiliary values are permitted. Default is <code>NULL</code>.
-When supplied, exogenous variables are treated as random
-(<code>fixed.x = FALSE</code>); a message is shown if <code>fixed.x</code> was <code>TRUE</code>.
-This adds distributional assumptions for these variables and
-does not guarantee MAR or control for causal confounding.</p></dd>
+Default is <code>NULL</code>. See Details, "Auxiliary Variables for FIML", for
+how they are included and the supported settings.</p></dd>
 
 
 <dt id="arg-q-out">q_out<a class="anchor" aria-label="anchor" href="#arg-q-out"></a></dt>
@@ -971,8 +963,18 @@ that should adjust the substantive regression equations.
 Bootstrap and Monte Carlo confidence intervals use the augmented
 model. Printed output identifies auxiliary variables; the path plot
 continues to show the substantive mediation model.
-<code>aux = NULL</code> preserves the usual workflow. Grouped, clustered,
-weighted, categorical and SAM analyses are not supported with <code>aux</code>.</p>
+<code>aux = NULL</code> preserves the usual workflow. SAM is not supported
+with <code>aux</code>.</p>
+<p>To use <code>aux</code>, set <code>fit_method = "sem"</code> and use FIML with ML or MLR.
+Both <code>indicators</code> and <code>moderators</code> must be <code>NULL</code>.
+Model variables, covariates, and auxiliary variables must be numeric;
+auxiliary variables must also be nonconstant and distinct from model
+variables and covariates. Missing auxiliary values are permitted.
+Exogenous variables are treated as random (<code>fixed.x = FALSE</code>).
+If <code>fixed.x</code> was <code>TRUE</code>, a message is shown only when <code>progress = TRUE</code>.
+Treating exogenous variables as random adds distributional assumptions
+for these variables. Using auxiliary variables does not guarantee MAR
+or control for confounding.</p>
 </div>
 
 <div class="section">
