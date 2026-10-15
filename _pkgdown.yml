@@ -59,6 +59,7 @@ articles:
   navbar: Multiple Imputation
   contents:
   - do_mc_lavaan_mi
+  - articles/q_mediation_mi
 
 - title: Helpers
   navbar: Helpers
